@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+    commands:
+      - echo "Install phase"
+  pre_build:
+    commands:
+      - echo "Pre-build phase"
+  build:
+    commands:
+      - echo "Build phase"
+      - cp index.html /dist/index.html
+  post_build:
+    commands:
+      - echo "Post-build phase"
+
+artifacts:
+  files: /dist/**
